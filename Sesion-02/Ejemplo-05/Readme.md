@@ -19,10 +19,17 @@ Conocer el procedimiento para realizar la operación __Read__ a una tabla en un 
    ![Tabla Libro](assets/tabla-libro.jpg)
 
    Si no cuenta con la tabla, entonces inicializarla con el siguiente comando:
+   
+   Mac/Linux/WSL:
    ```console
    Sesion-02/Ejemplo-05 $ docker exec -i mysql-db mysql -hlocalhost -uBiblioteca -pBiblioteca Biblioteca < sql/tabla-libro.sql
 
    Sesion-02/Ejemplo-05 $
+   ```
+   
+   Windows Powershell:
+   ```console
+   Get-Content sql/tabla-libro.sql | docker exec -i mysql-db mysql -hlocalhost -uBiblioteca -pBiblioteca Biblioteca
    ```
 
 1. Instalar el módulo `mysql-connector-python` que será el responsable de permitir realizar una conexión a base de datos MySQL / MariaDB desde Python.
