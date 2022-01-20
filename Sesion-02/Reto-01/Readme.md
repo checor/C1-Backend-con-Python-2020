@@ -23,21 +23,27 @@ Inicializar la base de datos en un servidor MariaDB haciendo uso de contenedores
 
 ### DESARROLLO
 4. Inicializar la base de datos usando el archivo `sql/banco.sql`:
-
+   
+   Linux/Mac/WSL:
    ```console
-   Sesion-02/Reto-01 $ docker exec -i pythonsql mysql -hlocalhost -uroot -ppythonsql < banco.sql
+   Sesion-02/Reto-01 $ docker exec -i mysql-db mysql -hlocalhost -uroot -ppythonsql < banco.sql
    ```
+   PowerShell:
+   ```pwershell
+   PS C:\Sesion-02\Reto-01> Get-Content .\banco.sql | docker exec -i mysql-db mysql -hlocalhost -uroot -psecret
+   ```
+   
    ***
 
 7. Para validar que la base de datos se haya inicializado de forma correcta se realiza una conexión a la base de datos Banco usando los datos:
 
    - __Host:__ localhost
    - __User:__ Banco
-   - __Pass:__ Banco
+   - __Pass:__ password
    - __Base de datos:__ Banco
 
   ```console
-  Sesion-02/Reto-01 $ docker exec -it pythonsql mysql -hlocalhost -uBanco -pBanco Banco
+  Sesion-02/Reto-01 $ docker exec -it mysql-db mysql -hlocalhost -uBanco -ppassword Banco
   Welcome to the MariaDB monitor.  Commands end with ; or \g.
   Your MariaDB connection id is 11
   Server version: 10.3.15-MariaDB-1:10.3.15+maria~bionic mariadb.org binary distribution
