@@ -20,7 +20,7 @@ Conocer el procedimiento para realizar la operación __Read__ a una tabla en un 
 
    Si no cuenta con la tabla, entonces inicializarla con el siguiente comando:
    ```console
-   Sesion-02/Ejemplo-05 $ docker exec -i pythonsql mysql -hlocalhost -uBiblioteca -pBiblioteca Biblioteca < sql/tabla-libro.sql
+   Sesion-02/Ejemplo-05 $ docker exec -i mysql-db mysql -hlocalhost -uBiblioteca -pBiblioteca Biblioteca < sql/tabla-libro.sql
 
    Sesion-02/Ejemplo-05 $
    ```
