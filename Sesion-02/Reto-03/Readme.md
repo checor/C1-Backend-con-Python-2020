@@ -5,12 +5,12 @@
 Realizar la operación __UPDATE__ para un registro de una tabla con Python y MariaDB.
 
 ### REQUISITOS
-1. Contar con los datos de conexión a la base de datos BeduTravels.
+1. Contar con los datos de conexión a la base de datos Banco.
 
    __Host:__ localhost <br />
-   __User:__ BeduTravels <br />
-   __Password:__ BeduTravels <br />
-   __Base de datos:__ BeduTravels
+   __User:__ Banco <br />
+   __Password:__ Banco <br />
+   __Base de datos:__ Banco
 
 1. Contar con la tabla __Usuario__ creada y con datos muestra en la base de datos.
 
