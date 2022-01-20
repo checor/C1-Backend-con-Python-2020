@@ -22,14 +22,15 @@ Conocer el procedimiento para realizar la operación __Read__ a una tabla en un 
    
    Mac/Linux/WSL:
    ```console
-   Sesion-02/Ejemplo-05 $ docker exec -i mysql-db mysql -hlocalhost -uBiblioteca -pBiblioteca Biblioteca < sql/tabla-libro.sql
+   Sesion-02/Ejemplo-05 $ docker exec -i mysql-db mysql -hlocalhost -uroot -psecret < sql/biblioteca.sql
 
-   Sesion-02/Ejemplo-05 $
+   Sesion-02/Ejemplo-05 $  docker exec -i mysql-db mysql -hlocalhost -uBiblioteca -pBiblioteca Biblioteca < sql/tabla-libro.sql
    ```
    
    Windows Powershell:
    ```console
-   Get-Content sql/tabla-libro.sql | docker exec -i mysql-db mysql -hlocalhost -uBiblioteca -pBiblioteca Biblioteca
+   Get-Content sql\biblioteca.sql | docker exec -i mysql-db mysql -hlocalhost -uroot -psecret
+   Get-Content sql\tabla-libro.sql | docker exec -i mysql-db mysql -hlocalhost -uBiblioteca -pBiblioteca Biblioteca
    ```
 
 1. Instalar el módulo `mysql-connector-python` que será el responsable de permitir realizar una conexión a base de datos MySQL / MariaDB desde Python.
