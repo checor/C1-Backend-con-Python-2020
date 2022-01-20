@@ -7,11 +7,11 @@ Inicializar la base de datos en un servidor MariaDB haciendo uso de contenedores
 
 #### REQUISITOS
 1. Contar con Docker instalado
-1. Contar con el contenedor __pythonsql__ ya creado en el Ejemplo-01.
+1. Contar con el contenedor __mysql-db__ ya creado en el Ejemplo-01.
 1. Contar con los datos de conexión al servidor MariaDB como usuario root:
   - __Host:__ localhost
   - __User:__ root
-  - __Pass:__ pythonsql
+  - __Pass:__ secret
 1. Haber actualizado el repositorio
 1. Abrir una terminal y cambiarse a la carpeta de trabajo `Sesion-02/Reto-01`:
 
