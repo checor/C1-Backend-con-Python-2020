@@ -1,4 +1,6 @@
 DROP DATABASE IF EXISTS Banco;
 CREATE DATABASE Banco;
-GRANT ALL PRIVILEGES ON Banco.* TO Banco@'%' IDENTIFIED BY 'Banco';
-GRANT ALL PRIVILEGES ON Banco.* TO Banco@'localhost' IDENTIFIED BY 'Banco';
+CREATE USER IF NOT EXISTS 'Banco'@'localhost' IDENTIFIED BY 'password';
+CREATE USER IF NOT EXISTS 'Banco'@'%' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON Banco.* TO 'Banco'@'%';
+GRANT ALL PRIVILEGES ON Banco.* TO 'Banco'@'localhost';
