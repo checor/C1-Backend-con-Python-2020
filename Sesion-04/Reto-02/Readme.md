@@ -13,10 +13,10 @@
 
    __Se modifica la ruta:__
    ```python
-   path("logout/", auth_views.logoutView.as_view(next_page="/login/"), name="logout"),
+   path("logout/", auth_views.logoutView.as_view(next_page="/login"), name="logout"),
    ```
    De igual forma no se requiere la la vista `logout_user()`.
 
-   __Borra la vista `logout_user() del archivos views.py`__
+   __Borra la vista `logout_user() del archivos views.py, si la tienes`__
 
     Verifica que el proceso de login y logout sigue funcionando
